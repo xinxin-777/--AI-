@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=DM+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-primary: #1A6B5C;
+  --color-warn: #D97B3A;
+  --color-danger: #C94F42;
+  --color-success: #3A8C5C;
+  --color-bg: #F4F1EC;
+  --color-card: #FFFFFF;
+  --color-text: #1A1F1C;
+  --color-text-sub: #5A6360;
+  --color-text-light: #9AA5A2;
+}
+
+@theme inline {
+  --color-primary: #1A6B5C;
+  --color-warn: #D97B3A;
+  --color-danger: #C94F42;
+  --color-success: #3A8C5C;
+  --color-bg: #F4F1EC;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-serif {
+  font-family: 'Noto Serif SC', serif;
+}
+
+.app-container {
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--color-bg);
+  position: relative;
+}
+
+/* Safe area padding for bottom nav */
+.pb-safe {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom));
+}
